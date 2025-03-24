@@ -1,12 +1,49 @@
-# React + Vite
+# Stopwatch
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React-based stopwatch application that allows users to start, stop, and reset a timer with millisecond precision.
 
-Currently, two official plugins are available:
+## Features
+- Start the stopwatch
+- Stop the stopwatch
+- Reset the stopwatch
+- Displays time in HH:MM:SS:MS format
+- Uses React hooks (`useState`, `useEffect`, `useRef`) for state management
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+- React
+- JavaScript
+- HTML & CSS
 
-## Expanding the ESLint configuration
+## Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/stopwatch.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd stopwatch
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Start the development server:
+   ```sh
+   npm start
+   ```
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Usage
+1. Click the **Start** button to begin timing.
+2. Click the **Stop** button to pause the stopwatch.
+3. Click the **Reset** button to reset the time to `00:00:00:00`.
+
+## Code Explanation
+- `useState` is used to manage the stopwatch state (`isRunning` and `elapsedTime`).
+- `useRef` is used to store the interval ID and start time without triggering re-renders.
+- `useEffect` handles the timer updates and clears the interval when the stopwatch stops.
+- The `formatTime` function ensures the time is displayed in a human-readable format.
+
+## Contributing
+Feel free to fork the repository and submit pull requests for improvements!
+
+
